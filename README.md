@@ -16,7 +16,7 @@ Choosing appropriate variable and function names will form part of your assessme
 
 Build a frontend for the API and add the following:
 
-Home page:
+HOME page:
 
 Make a GET request to fetch a list of resources from your API.
 Create HTML for each item and display at least 3 properties for each.
@@ -25,7 +25,7 @@ Each item should also display a button or icon. Clicking on this button should t
 
 There should be a text input on this page that filters the array of results on one of the properties.
 
-Favourites page:
+FAVOURITES page:
 
 This page should fetch the array of items stored in localStorage and display them or display a message that there are no items.
 
