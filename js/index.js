@@ -1,5 +1,6 @@
 import { baseUrl } from "./settings/api.js";
 import { renderNews } from "./components/renderNews.js";
+import { searchNews } from "./components/searchNews.js";
 import displayMessage from "./components/displayMessage.js";
 
 const newsUrl = baseUrl + "articles";
@@ -10,7 +11,7 @@ const newsUrl = baseUrl + "articles";
     const results = await response.json();
 
     renderNews(results);
-    // throw error;
+    searchNews(results);
   } catch (error) {
     console.log(error);
     displayMessage(
