@@ -6,10 +6,11 @@
 
 :root {
     --primary-colour: #343840;
+    --background-colour: #E8DFDD;
 }
 
 body {
-    background:#E8DFDD;
+    background: var(--background-colour);
     font-family: sans-serif;
 }
 
@@ -35,8 +36,17 @@ body {
     margin: 1rem;
     padding: 1.5rem;
     border-radius: 1rem;
-    background: white;
+    background: var(--primary-colour);
+    color: var(--background-colour);
     width: 400px;
+}
+
+.single-news > h4, p, i {
+    margin: 0.5rem 0;
+}
+
+p.author {
+    font-style: italic;
 }
 
 .message {
@@ -62,6 +72,6 @@ body {
     color: green;
 }
 
-h1, h4, p {
-    color: var(--primary-colour);
+h4 {
+    text-transform: uppercase;
 }
