@@ -2,7 +2,8 @@
 
 ## Brief
 
-Use the Strapi API provided by Noroff. The login details for admin section are in the README file in the repo.
+Use the Strapi API provided by Noroff: https://github.com/NoroffFEU/strapi-js2-ca (download, run locally).
+The login details for admin section are in the README file in the repo (Username: admin@admin.com, Password: Pass1234).
 
 You can add and edit content in the Strapi project but do not edit the content type(s) (don’t add, edit or delete fields). The markers will use the same version of the API found in the repo.
 
