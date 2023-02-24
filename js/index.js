@@ -1,21 +1,12 @@
 import { baseUrl } from "./settings/api.js";
 import { renderNews } from "./components/renderNews.js";
 import { searchNews } from "./components/searchNews.js";
-import displayMessage from "./components/displayMessage.js";
+// import displayMessage from "./components/displayMessage.js";
 import { getExistingFavourites } from "./utils/favouritesFunctions.js";
 
 const newsUrl = baseUrl + "articles";
-
-// const myVariable = "hello there";
-// localStorage.setItem("var1", myVariable);
-// const variable1 = localStorage.getItem("var1");
-// console.log(variable1);
-
-// const colours = ["green", "yellow", "orange"];
-// localStorage.setItem("savedColours", JSON.stringify(colours));
-// const gottenColours = localStorage.getItem("savedColours");
-// const parsedColours = JSON.parse(gottenColours);
-// console.log(parsedColours);
+const containerNews = document.querySelector(".container-news");
+const alertError = document.querySelector(".alert-danger");
 
 (async function () {
   try {
@@ -26,18 +17,15 @@ const newsUrl = baseUrl + "articles";
     renderNews(results);
     searchNews(results);
 
-    const heartButtons = document.querySelectorAll(".single-news i.fa-heart");
+    const heartButtons = document.querySelectorAll("i.fa-heart");
 
     heartButtons.forEach(function (button) {
       button.addEventListener("click", handleClick);
     });
   } catch (error) {
     console.log(error);
-    displayMessage(
-      "error",
-      "Something went wrong on our side. Try refreshing the site.",
-      ".container-news"
-    );
+    containerNews.innerHTML = "";
+    alertError.style.display = "block";
   }
 })();
 

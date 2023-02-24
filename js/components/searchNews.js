@@ -1,7 +1,7 @@
 import { renderNews } from "./renderNews.js";
 
 export function searchNews(news) {
-  const searchInput = document.querySelector(".search-input");
+  const searchInput = document.querySelector(".form-control");
 
   function searchTitles(event) {
     const searchedValue = event.target.value.trim().toLowerCase();

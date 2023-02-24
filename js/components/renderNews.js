@@ -21,11 +21,17 @@ export function renderNews(newsToRender) {
       cssClass = "fa-solid";
     }
 
-    containerNews.innerHTML += `<div class="single-news">
-                                    <h4>${news.title}</h4>
-                                    <p>${news.summary}</p>
-                                    <p class="author">-- ${news.author}</p>
-                                    <i class="${cssClass} fa-heart" data-id="${news.id}" data-title="${news.title}" data-summary="${news.summary}" data-author="${news.author}"></i>
+    containerNews.innerHTML += `<div class="col sm-12 md-4">
+                                  <div class="card">
+                                    <div class="card-header">${news.title}</div>
+                                    <div class="card-body">
+                                      <blockquote class="blockquote mb-0">
+                                        <p>${news.summary}</p>
+                                        <footer class="blockquote-footer">${news.author}</footer>
+                                        <i class="${cssClass} fa-heart" data-id="${news.id}" data-title="${news.title}" data-summary="${news.summary}" data-author="${news.author}"></i>
+                                      </blockquote>
+                                    </div>
+                                  </div>
                                 </div>`;
   });
 }
